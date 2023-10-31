@@ -1,95 +1,79 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import Link from "next/link";
+import React from "react";
+import Dashboard from "@/app/post/dashboard";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <main className={styles.main}>
+            <div className={styles.description}>
+                <p>
+                    Prototype für eine Abschlussarbeit an der Hochschule Bonn-Rhein-Sieg&nbsp;
+                </p>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+            <div className={styles.center}>
+                <Image
+                    className={styles.logo}
+                    src="/next.svg"
+                    alt="Next.js Logo"
+                    width={180}
+                    height={37}
+                    priority
+                />
+            </div>
+            <div>
+                <Link href='/post/dashboard'> Start den Prototypen -&gt;</Link>
+            </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+            <div className={styles.grid}>
+                <a
+                    href="https://objektkultur.de/"
+                    className={styles.card}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <h2>
+                        in Zusammenarbeit mit <span>-&gt;</span>
+                    </h2>
+                    <p>Objektkultur</p>
+                </a>
+                <a
+                    href="https://www.h-brs.de/de"
+                    className={styles.card}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <h2>
+                        Sponsor <span>-&gt;</span>
+                    </h2>
+                    <p></p>
+                </a>
+                <a
+                    href="https://www.h-brs.de/de/inf/prof-dr-sascha-alda"
+                    className={styles.card}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <h2>
+                        erst Betreuer <span>-&gt;</span>
+                    </h2>
+                    <p>Prof. Dr. Sascha Alda</p>
+                </a>
+                <a
+                    href="https://www.h-brs.de/de/inf/prof-dr-matthias-bertram"
+                    className={styles.card}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <h2>
+                        zweit Betreuer <span>-&gt;</span>
+                    </h2>
+                    <p>Prof. Dr. Matthias Bertram</p>
+                </a>
+            </div>
+        </main>
+    );
 }
